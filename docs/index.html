@@ -234,6 +234,66 @@
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
 
+    .results-table {
+    width: 100%;
+    max-width: 900px;
+    margin: 30px auto;
+    border-collapse: collapse;
+    font-family: 'Google Sans', sans-serif;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden; /* Ensures the border-radius shows */
+}
+
+.results-table thead {
+    background-color: #2c3e50;
+    color: white;
+}
+
+.results-table th {
+    padding: 15px;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 0.05em;
+}
+
+.results-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #eee;
+    text-align: center;
+}
+
+.results-table tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+.results-table tbody tr:hover {
+    background-color: #edf2f7;
+    transition: background-color 0.2s ease;
+}
+
+.results-table td:first-child {
+    text-align: left;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.checkpoint-link {
+    display: inline-block;
+    padding: 6px 12px;
+    background-color: #444;
+    color: white !important;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 13px;
+    transition: transform 0.1s;
+}
+
+.checkpoint-link:hover {
+    background-color: #000;
+    transform: scale(1.05);
+}
+
 </style>
 
 <hr>
@@ -261,10 +321,10 @@ Our experiments demonstrate that out-of-the-box VLMs lack the explicit temporal 
 <h2 id="method">Method</h2>
 <p>TIMID learns to detec mistakes by aligning what it sees with what it describe the task and mistake. The architecture relies on four key components:</p>
 <ul>
-  <li><strong>Video Encoder:</strong>Extracts high-level visual features from short video clips.</li>
-  <li><strong>Temporal Context:</strong>Tracks both local and global context to understand <i>when</i> actions happen.</li>
-  <li><strong>Semantic Alignment:</strong>Uses a text encoder to match the visual data with the text prompts</li>
-  <li><strong>Classifier:</strong>Generates a final frame-by-frame score indicating exactly when a mistake occurs.</li>
+  <li><strong>Video Encoder:</strong> Extracts high-level visual features from short video clips.</li>
+  <li><strong>Temporal Context:</strong> Tracks both local and global context to understand <i>when</i> actions happen.</li>
+  <li><strong>Semantic Alignment:</strong> Uses a text encoder to match the visual data with the text prompts</li>
+  <li><strong>Classifier:</strong> Generates a final frame-by-frame score indicating exactly when a mistake occurs.</li>
 </ul>
 <figure class="teaser">
     <img src="img/pipelinev3.png" alt="Method">
@@ -296,52 +356,52 @@ Our experiments demonstrate that out-of-the-box VLMs lack the explicit temporal 
 <p>The table below summarizes the Average Precision (AP), Average Recall (AR), and F1 scores achieved by TIMID across various datasets included in our benchmark suite.</p>
 
 <table class="results-table">
-  <thead>
-    <tr>
-      <th>Dataset</th>
-      <th>AP</th>
-      <th>AR</th>
-      <th>F1</th>
-      <th>Checkpoint</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Bridge</td>
-      <td>49.72</td>
-      <td>33.77</td>
-      <td>40.22</td>
-      <td><a href="https://huggingface.co/datasets/nereagallego/TIMID-data/blob/main/ckpt/bridge/bridge__4972.pkl" target="_blank">Link</a></td>
-    </tr>
-    <tr>
-      <td>Mutex</td>
-      <td>76.83</td>
-      <td>35.89</td>
-      <td>40.10</td>
-      <td><a href="https://huggingface.co/datasets/nereagallego/TIMID-data/blob/main/ckpt/mutex/mutex__7683.pkl" target="_blank">Link</a></td>
-    </tr>
-    <tr>
-      <td>Ordering</td>
-      <td>48.71</td>
-      <td>36.89</td>
-      <td>33.45</td>
-      <td><a href="https://huggingface.co/datasets/nereagallego/TIMID-data/blob/main/ckpt/ordering/ordering__4871.pkl" target="_blank">Link</a></td>
-    </tr>
-    <tr>
-      <td>Mutex Real</td>
-      <td>72.01</td>
-      <td>23.64</td>
-      <td>23.91</td>
-      <td><a href="https://huggingface.co/datasets/nereagallego/TIMID-data/blob/main/ckpt/mutex/mutex__7683.pkl" target="_blank">Link</a></td>
-    </tr>
-    <tr>
-      <td>Ordering Real</td>
-      <td>19.87</td>
-      <td>12.12</td>
-      <td>7.92</td>
-      <td><a href="https://huggingface.co/datasets/nereagallego/TIMID-data/blob/main/ckpt/ordering/ordering__4871.pkl" target="_blank">Link</a></td>
-    </tr>
-  </tbody>
+<thead>
+<tr>
+<th>Dataset</th>
+<th>AP</th>
+<th>AR</th>
+<th>F1</th>
+<th>Checkpoint</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bridge</td>
+<td>49.72</td>
+<td>33.77</td>
+<td>40.22</td>
+<td><a href="https://huggingface.co/datasets/nereagallego/TIMID-data/blob/main/ckpt/bridge/bridge__4972.pkl" class="checkpoint-link" target="_blank">Download</a></td>
+</tr>
+<tr>
+<td>Mutex</td>
+<td>76.83</td>
+<td>35.89</td>
+<td>40.10</td>
+<td><a href="https://huggingface.co/datasets/nereagallego/TIMID-data/blob/main/ckpt/mutex/mutex__7683.pkl" class="checkpoint-link" target="_blank">Download</a></td>
+</tr>
+<tr>
+<td>Ordering</td>
+<td>48.71</td>
+<td>36.89</td>
+<td>33.45</td>
+<td><a href="https://huggingface.co/datasets/nereagallego/TIMID-data/blob/main/ckpt/ordering/ordering__4871.pkl" class="checkpoint-link" target="_blank">Download</a></td>
+</tr>
+<tr>
+<td>Mutex Real</td>
+<td>72.01</td>
+<td>23.64</td>
+<td>23.91</td>
+<td><a href="https://huggingface.co/datasets/nereagallego/TIMID-data/blob/main/ckpt/mutex/mutex__7683.pkl" class="checkpoint-link" target="_blank">Download</a></td>
+</tr>
+<tr>
+<td>Ordering Real</td>
+<td>19.87</td>
+<td>12.12</td>
+<td>7.92</td>
+<td><a href="https://huggingface.co/datasets/nereagallego/TIMID-data/blob/main/ckpt/ordering/ordering__4871.pkl" class="checkpoint-link" target="_blank">Download</a></td>
+</tr>
+</tbody>
 </table>
 
 <hr>
