@@ -35,7 +35,7 @@ Remove any sections you do not need.
 
 ## 🔔 News
 - 🆕 03/2026: Code released.
-- ⭐ MM/YYYY: Benchmark / dataset released.
+- ⭐ 03/2026: Benchmark / dataset released.
 <!-- - 🥳 MM/YYYY: Paper accepted at VENUE.
 - 🔧 MM/YYYY: Added support for MODEL/FEATURE.
 - ⚠️ MM/YYYY: Breaking change: WHAT_CHANGED. -->
@@ -95,7 +95,7 @@ To train the model on the benchmark:
 ```
 python main.py --mode train --model_mode 1 --dataset mutex #dataset:[mutex, ordering, bridge, mutex_real, ordering_real] mode:[train, infer] model_mode[1, 2, 3, 4]
 ```
-
+Training/inference Mode 2, 3 and 4 correspond to the "Semantic Only", "Temporal Only" and ["PEL4VAD"](https://github.com/yujiangpu20/PEL4VAD/tree/master) configurations in the ablation study and baseline comparison, respectively.
 
 ## 📜 License
  This work is under AGPL-3.0 license.
