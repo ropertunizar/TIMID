@@ -25,10 +25,10 @@ Remove any sections you do not need.
 
 <div align="center">
   <a href="https://ropertunizar.github.io/TIMID/"><strong>🌍 Homepage</strong></a> |
-  <a href="https://huggingface.co/datasets/nereagallego/TIMID-data"><strong>🤗 Dataset and 🧠Models</strong></a> |
+  <a href="https://huggingface.co/datasets/nereagallego/TIMID-data"><strong>🤗 Benchmarks </strong></a> |
   <a href="ARXIV_OR_PAPER_URL"><strong>📝 Paper</strong></a> |
   <a href="DEMO_URL"><strong>🎬 Demo</strong></a> |
-  <!-- <a href="MODEL_CARD_URL"><strong>🧠 Models</strong></a> -->
+  <a href="https://huggingface.co/datasets/nereagallego/TIMID-data/tree/main/ckpt"><strong>🧠 Models</strong></a>
 </div>
 
 ---
@@ -97,12 +97,22 @@ python main.py --mode train --model_mode 1 --dataset mutex #dataset:[mutex, orde
 ```
 Training/inference Mode 2, 3 and 4 correspond to the "Semantic Only", "Temporal Only" and ["PEL4VAD"](https://github.com/yujiangpu20/PEL4VAD/tree/master) configurations in the ablation study and baseline comparison, respectively.
 
+## Results and Models
+
+|Dataset | AP | AR | F1 | ckpt |
+| -------- | -------- | -------- | -------- | -------- |
+| Bridge | 49.72 | 33.77 | 40.22 | [link](https://huggingface.co/datasets/nereagallego/TIMID-data/blob/main/ckpt/bridge/bridge__4972.pkl) |
+| Mutex | 76.83 | 35.89 | 40.1 | [link](https://huggingface.co/datasets/nereagallego/TIMID-data/blob/main/ckpt/mutex/mutex__7683.pkl) |
+| Ordering | 48.71 | 36.89 | 33.45 | [link](https://huggingface.co/datasets/nereagallego/TIMID-data/blob/main/ckpt/ordering/ordering__4871.pkl) |
+| Mutex Real | 72.01 | 23.64 | 23.91 | [link](https://huggingface.co/datasets/nereagallego/TIMID-data/blob/main/ckpt/mutex/mutex__7683.pkl) |
+| Ordering Real | 19.87 | 12.12 | 7.92 | [link](https://huggingface.co/datasets/nereagallego/TIMID-data/blob/main/ckpt/ordering/ordering__4871.pkl) |
+
 ## 📜 License
  This work is under AGPL-3.0 license.
  
 ## 📝 Citation
 ```bibtex
-@inproceedings{CITATION_KEY,
+@inproceedings{gallego2026timid,
   title={PAPER_TITLE},
   author={AUTHORS},
   booktitle={VENUE},
