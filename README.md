@@ -10,13 +10,13 @@ Remove any sections you do not need.
 <div align="center">
   <a href="https://github.com/nereagallego" target="_blank">Nerea Gallego</a><sup>1,*</sup>,
   <a href="https://github.com/fsgaspar" target="_blank">Fernando Salanova</a><sup>1,*</sup>,
-  <a href="https://github.com/claudiomann" target="_blank">Claudio Mannarano</a><sup>1</sup>,
+  <a href="https://github.com/claudiomann" target="_blank">Claudio Mannarano</a><sup>1,2</sup>,
   <a target="_blank">Cristian Mahulea</a><sup>1</sup>
   <a href="https://github.com/emontijano" target="_blank">Eduardo Montijano</a><sup>1</sup>
 </div>
 
 <div align="center">
-  <sup>1</sup>University of Zaragoza
+  <sup>1</sup>University of Zaragoza, <sup>2</sup>Università di Torino
 </div>
 
 <div align="center">
