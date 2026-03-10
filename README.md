@@ -25,10 +25,10 @@ Remove any sections you do not need.
 
 <div align="center">
   <a href="https://ropertunizar.github.io/TIMID/"><strong>🌍 Homepage</strong></a> |
-  <a href="DATASET_OR_BENCHMARK_URL"><strong>🤗 Benchmark / Dataset</strong></a> |
+  <a href="https://huggingface.co/datasets/nereagallego/TIMID-data"><strong>🤗 Dataset and 🧠Models</strong></a> |
   <a href="ARXIV_OR_PAPER_URL"><strong>📝 Paper</strong></a> |
   <a href="DEMO_URL"><strong>🎬 Demo</strong></a> |
-  <a href="MODEL_CARD_URL"><strong>🧠 Models</strong></a>
+  <!-- <a href="MODEL_CARD_URL"><strong>🧠 Models</strong></a> -->
 </div>
 
 ---
@@ -79,9 +79,26 @@ source timid_env/bin/activate
 pip install -r requirements.txt
 ```
 ## 🚀 Usage
+1. Data preparation
+Data and pretrained models are alloceted in [Huggingface](https://huggingface.co/datasets/nereagallego/TIMID-data). You can download using the command line:
+```
+hf download nereagallego/TIMID-data --repo-type=dataset --local-dir .
+
+```
+2. Inference
+To run a pre-trained model on one of the datasets:
+```
+python main.py --mode infer --model_mode 1 --ckpt_path ckpt/mutex/mutex__7683.pkl --dataset mutex #dataset:[mutex, ordering, bridge, mutex_real, ordering_real] mode:[train, infer] model_mode[1, 2, 3, 4]
+```
+3. Training
+To train the model on the benchmark:
+```
+python main.py --mode train --model_mode 1 --dataset mutex #dataset:[mutex, ordering, bridge, mutex_real, ordering_real] mode:[train, infer] model_mode[1, 2, 3, 4]
+```
+
 
 ## 📜 License
- Discuss with your supervisor the license that you want to set and include the licenses of any previous repo in which your code was inspired.
+ This work is under AGPL-3.0 license.
  
 ## 📝 Citation
 ```bibtex
@@ -94,4 +111,4 @@ pip install -r requirements.txt
 ```
 
 ## 🙏 Acknowledgements
-Ask to your supervisor.
+This work was partially supported by grants AIA2025-163563-C31, PID2024-159284NB-I00, funded by MCIN/AEI/10.13039/501100011033 and ERDF, the Office of Naval Research Global grant N62909-24-1-2081 and DGA project T45\_23R, the work was also supperted by a 2024 DGA scholarship.
