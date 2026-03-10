@@ -113,9 +113,9 @@ def test_func(dataloader, model, gt, dataset, model_mode):
             return roc_auc, n_far
         elif dataset == 'bridge':
             return pr_auc, arec
-        elif dataset == 'dataset4':
+        elif dataset == 'ordering':
             return pr_auc, arec
-        elif dataset == 'dataset5':
+        elif dataset == 'mutex':
             return pr_auc, arec
         else:
             raise RuntimeError('Invalid dataset.')

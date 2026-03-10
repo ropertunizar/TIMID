@@ -81,14 +81,13 @@ def build_config(dataset):
         cfg.kappa = 3  # smooth window
 
     elif dataset in ['bridge']:
-        features = 'i3d'
         cfg.dataset = 'bridge'
         cfg.model_name = 'bridge_'
         cfg.metrics = 'AUC'
-        cfg.feat_prefix = './bridge/{}_onecrop'.format(features)
-        cfg.train_list = './list/bridge/train_{}.list'.format(features)
-        cfg.test_list = './list/bridge/test_{}.list'.format(features)
-        cfg.token_feat = './list/bridge/bridge-nollm-prompt.npy'
+        cfg.feat_prefix = './bridge/i3d_onecrop'
+        cfg.train_list = './list/bridge/train.list'
+        cfg.test_list = './list/bridge/test.list'
+        cfg.token_feat = './list/bridge/bridge-prompt.npy'
         cfg.gt = './list/bridge/gt.npy'
         # TCA settings
         cfg.win_size = 8
@@ -106,17 +105,15 @@ def build_config(dataset):
         cfg.smooth = 'None'  # ['fixed': 5, slide': 3]
         cfg.kappa = 3  # smooth window
  
-    elif dataset in ['dataset4-exp3', 'dataset4-exp5']:
-        features = 'i3d'
-        exp = 'exp3' if dataset == 'dataset4-exp3' else 'exp5'
-        cfg.dataset = 'dataset4'
-        cfg.model_name = 'dataset4_'
+    elif dataset in ['ordering']:
+        cfg.dataset = 'ordering'
+        cfg.model_name = 'ordering_'
         cfg.metrics = 'AUC'
-        cfg.feat_prefix = './dataset4/{}_onecrop'.format(features)
-        cfg.train_list = './list/dataset4/train_list_{}_{}.list'.format(exp, features)
-        cfg.test_list = './list/dataset4/test_list_{}_{}.list'.format(exp, features)
-        cfg.token_feat = './list/dataset4/dataset4-{}-nollm-prompt.npy'.format(exp)
-        cfg.gt = './list/dataset4/dense_gt_{}.npy'.format(exp)
+        cfg.feat_prefix = './ordering/i3d_onecrop'
+        cfg.train_list = './list/ordering/train_list.list'
+        cfg.test_list = './list/ordering/test_list.list'
+        cfg.token_feat = './list/ordering/ordering-prompt.npy'
+        cfg.gt = './list/ordering/gt.npy'
         # TCA settings
         cfg.win_size = 9
         cfg.gamma = 0.08
@@ -133,17 +130,15 @@ def build_config(dataset):
         cfg.smooth = 'None'  # ['fixed': 5, slide': 3]
         cfg.kappa = 3  # smooth window
 
-    elif dataset in ['dataset5-exp2', 'dataset5-exp4']:
-        features = 'i3d'
-        exp = 'exp2' if dataset == 'dataset5-exp2' else 'exp4'
-        cfg.dataset = 'dataset5'
-        cfg.model_name = 'dataset5_'
+    elif dataset in ['mutex']:
+        cfg.dataset = 'mutex'
+        cfg.model_name = 'mutex_'
         cfg.metrics = 'AUC'
-        cfg.feat_prefix = './dataset5/{}_onecrop'.format(features)
-        cfg.train_list = './list/dataset5/train_list_{}_{}.list'.format(exp, features)
-        cfg.test_list = './list/dataset5/test_list_{}_{}.list'.format(exp, features)
-        cfg.token_feat = './list/dataset5/dataset5-{}-nollm-prompt.npy'.format(exp)
-        cfg.gt = './list/dataset5/dense_gt_{}.npy'.format(exp)
+        cfg.feat_prefix = './mutex/i3d_onecrop'
+        cfg.train_list = './list/mutex/train_list.list'
+        cfg.test_list = './list/mutex/test_list.list'
+        cfg.token_feat = './list/mutex/mutex-prompt.npy'
+        cfg.gt = './list/mutex/gt.npy'
         # TCA settings
         cfg.win_size = 9
         cfg.gamma = 0.08
@@ -160,17 +155,15 @@ def build_config(dataset):
         cfg.smooth = 'None'  # ['fixed': 5, slide': 3]
         cfg.kappa = 3  # smooth window
 
-    elif dataset in ['exp6']:
-        features = 'i3d'
-        exp = 'exp6'
-        cfg.dataset = 'exp6'
-        cfg.model_name = 'exp6_'
+    elif dataset in ['ordering_real']:
+        cfg.dataset = 'ordering_real'
+        cfg.model_name = 'ordering_real_'
         cfg.metrics = 'AUC'
-        cfg.feat_prefix = './exp6/{}_onecrop'.format(features)
-        cfg.train_list = './list/exp6/train_list_{}_{}.list'.format(exp, features)
-        cfg.test_list = './list/exp6/test_list_{}_{}.list'.format(exp, features)
-        cfg.token_feat = './list/dataset4/dataset4-exp5-nollm-prompt.npy'.format(exp)
-        cfg.gt = './list/exp6/dense_gt_{}.npy'.format(exp)
+        cfg.feat_prefix = './ordering_real/i3d_onecrop'
+        cfg.train_list = './list/ordering_real/train_list.list'
+        cfg.test_list = './list/ordering_real/test_list.list'
+        cfg.token_feat = './list/ordering_real/ordering-prompt.npy'
+        cfg.gt = './list/ordering_real/gt.npy'
         # TCA settings
         cfg.win_size = 9
         cfg.gamma = 0.08
@@ -187,17 +180,15 @@ def build_config(dataset):
         cfg.smooth = 'None'  # ['fixed': 5, slide': 3]
         cfg.kappa = 3  # smooth window
 
-    elif dataset in ['exp7']:
-        features = 'i3d'
-        exp = 'exp7'
-        cfg.dataset = 'exp7'
-        cfg.model_name = 'exp7_'
+    elif dataset in ['mutex_real']:
+        cfg.dataset = 'mutex_real'
+        cfg.model_name = 'mutex_real_'
         cfg.metrics = 'AUC'
-        cfg.feat_prefix = './exp7/{}_onecrop'.format(features)
-        cfg.train_list = './list/exp7/train_list_{}_{}.list'.format(exp, features)
-        cfg.test_list = './list/exp7/test_list_{}_{}.list'.format(exp, features)
-        cfg.token_feat = './list/dataset5/dataset5-exp4-nollm-prompt.npy'.format(exp)
-        cfg.gt = './list/exp7/dense_gt_{}.npy'.format(exp)
+        cfg.feat_prefix = './mutex_real/i3d_onecrop'
+        cfg.train_list = './list/mutex_real/train_list.list'
+        cfg.test_list = './list/mutex_real/test_list.list'
+        cfg.token_feat = './list/mutex_real/mutex-prompt.npy'
+        cfg.gt = './list/mutex_real/gt.npy'
         # TCA settings
         cfg.win_size = 9
         cfg.gamma = 0.08

@@ -132,11 +132,11 @@ def infer_func(model, dataloader, gt, logger, cfg, model_mode):
         fpr, tpr, _ = roc_curve(list(gt_complete_to_gt_chunk(gt, 16)), pred)
         roc_auc = auc(fpr, tpr)
         # pre, rec, _ = precision_recall_curve(list(gt_complete_to_gt_chunk(gt, 16)), pred)
-        pr_auc = calculate_average_precision(list(gt_complete_to_gt_chunk(gt, 16)), pred, model_mode==4)
-        arec = calculate_average_recall(list(gt_complete_to_gt_chunk(gt, 16)), pred, model_mode==4)
+        pr_auc = calculate_average_precision(list(gt_complete_to_gt_chunk(gt, 16)), pred, probabilities=model_mode==4)
+        arec = calculate_average_recall(list(gt_complete_to_gt_chunk(gt, 16)), pred, probabilities=model_mode==4)
 
         # add F1
-        f1 = calculate_f1(list(gt_complete_to_gt_chunk(gt, 16)), pred, model_mode==4)
+        f1 = calculate_f1(list(gt_complete_to_gt_chunk(gt, 16)), pred, probabilities=model_mode==4)
 
     time_elapsed = time.time() - st
     logger.info('offline AUC:{:.4f} AP:{:.4f} FAR:{:.4f} AR:{:.4f} F1:{:.4f} | Complete in {:.0f}m {:.0f}s\n'.format(

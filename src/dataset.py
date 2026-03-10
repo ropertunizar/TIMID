@@ -281,7 +281,7 @@ class Bridge(data.Dataset):
         return len(self.list)
 
 
-class MultirobotD4(data.Dataset):       
+class Ordering(data.Dataset):       
     def __init__(self, cfg, transform=None, test_mode=False):
         self.feat_prefix = cfg.feat_prefix
         if test_mode:
@@ -339,7 +339,7 @@ class MultirobotD4(data.Dataset):
         return len(self.list)
     
 
-class MultirobotD5(data.Dataset):       
+class Proximity(data.Dataset):       
     def __init__(self, cfg, transform=None, test_mode=False):
         self.feat_prefix = cfg.feat_prefix
         if test_mode:
@@ -398,7 +398,7 @@ class MultirobotD5(data.Dataset):
 
 
 
-class MultirobotD6(data.Dataset):       
+class OrderingReal(data.Dataset):       
     def __init__(self, cfg, transform=None, test_mode=False):
         self.feat_prefix = cfg.feat_prefix
         if test_mode:
@@ -448,7 +448,7 @@ class MultirobotD6(data.Dataset):
     def __len__(self):
         return len(self.list)
     
-class MultirobotD7(data.Dataset):       
+class MutexReal(data.Dataset):       
     def __init__(self, cfg, transform=None, test_mode=False):
         self.feat_prefix = cfg.feat_prefix
         if test_mode:

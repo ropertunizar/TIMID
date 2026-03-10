@@ -104,18 +104,18 @@ def main(cfg, args):
     elif cfg.dataset == 'bridge':
         train_data = Bridge(cfg, test_mode=False)
         test_data = Bridge(cfg, test_mode=True)
-    elif cfg.dataset == 'dataset4':
-        train_data = MultirobotD4(cfg, test_mode=False)
-        test_data = MultirobotD4(cfg, test_mode=True)
-    elif cfg.dataset == 'dataset5':
-        train_data = MultirobotD5(cfg, test_mode=False)
-        test_data = MultirobotD5(cfg, test_mode=True)
-    elif cfg.dataset == 'exp6':
+    elif cfg.dataset == 'ordering':
+        train_data = Ordering(cfg, test_mode=False)
+        test_data = Ordering(cfg, test_mode=True)
+    elif cfg.dataset == 'mutex':
+        train_data = Proximity(cfg, test_mode=False)
+        test_data = Proximity(cfg, test_mode=True)
+    elif cfg.dataset == 'ordering_real':
         train_data = None
-        test_data = MultirobotD6(cfg, test_mode=True)
-    elif cfg.dataset == 'exp7':
+        test_data = OrderingReal(cfg, test_mode=True)
+    elif cfg.dataset == 'mutex_real':
         train_data = None
-        test_data = MultirobotD7(cfg, test_mode=True)
+        test_data = MutexReal(cfg, test_mode=True)
     else:
         raise RuntimeError("Do not support this dataset!")
 
