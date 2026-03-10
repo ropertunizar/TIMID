@@ -113,10 +113,10 @@ Training/inference Mode 2, 3 and 4 correspond to the "Semantic Only", "Temporal 
 ## 📝 Citation
 ```bibtex
 @inproceedings{gallego2026timid,
-  title={PAPER_TITLE},
-  author={AUTHORS},
-  booktitle={VENUE},
-  year={YEAR}
+  title={TIMID: Time-Dependent Mistake Detection in Videos of Robot Executions},
+  author={Gallego, Nerea and Salanova, Fernando and Mannarano, Claudio and Mahulea, Cristian and Montijano, Eduardo},
+  <!-- booktitle={VENUE}, -->
+  year={2026}
 }
 ```
 
