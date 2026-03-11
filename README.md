@@ -110,6 +110,29 @@ Training/inference Mode 2, 3 and 4 correspond to the "Semantic Only", "Temporal 
 | Mutex Real | 72.01 | 23.64 | 23.91 | [link](https://huggingface.co/datasets/nereagallego/TIMID-data/blob/main/ckpt/mutex/mutex__7683.pkl) |
 | Ordering Real | 19.87 | 12.12 | 7.92 | [link](https://huggingface.co/datasets/nereagallego/TIMID-data/blob/main/ckpt/ordering/ordering__4871.pkl) |
 
+<div align="center">
+  <h2>Results Overview</h2>
+  <table style="width:100%; text-align:center; border:none;">
+    <tr>
+      <td width="33%">
+        <img src="docs/img/CompOrdSynt.gif" alt="Proximity Real Videos Prediction" width="100%">
+        <br>
+        <sub><b>Proximity Real Videos Prediction (Green is ours)</b></sub>
+      </td>
+      <td width="33%">
+        <img src="docs/img/CompOrdSynt.gif" alt="Ordering Real Videos Prediction" width="100%">
+        <br>
+        <sub><b>Ordering Real Videos Prediction (Green is ours)</b></sub>
+      </td>
+      <td width="33%">
+        <img src="docs/img/BridgeCompGood364.gif" alt="Bridge Prediction" width="100%">
+        <br>
+        <sub><b>Bridge Prediction (Green is ours)</b></sub>
+      </td>
+    </tr>
+  </table>
+</div>
+
 ## 📜 License
  This work is under AGPL-3.0 license.
  
