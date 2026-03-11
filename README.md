@@ -85,11 +85,14 @@ Data and pretrained models are alloceted in [Huggingface](https://huggingface.co
 hf download nereagallego/TIMID-data --repo-type=dataset --local-dir .
 
 ```
+To use the [Bridge dataset](https://rail-berkeley.github.io/bridgedata/), please download the first 1,000 episodes. This repository provides the necessary annotations.
+
 2. Inference
 To run a pre-trained model on one of the datasets:
 ```
 python main.py --mode infer --model_mode 1 --ckpt_path ckpt/mutex/mutex__7683.pkl --dataset mutex #dataset:[mutex, ordering, bridge, mutex_real, ordering_real] mode:[train, infer] model_mode[1, 2, 3, 4]
 ```
+
 3. Training
 To train the model on the benchmark:
 ```
