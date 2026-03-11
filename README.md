@@ -129,7 +129,6 @@ Training/inference Mode 2, 3 and 4 correspond to the "Semantic Only", "Temporal 
         <br>
         <sub><b>Ordering Real Videos Prediction (Green is ours)</b></sub>
       </td>
-      
     </tr>
   </table>
 </div>
