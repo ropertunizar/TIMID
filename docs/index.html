@@ -311,8 +311,9 @@
 
 /* The GIF Images */
 .gif-item img {
-  max-width: 100%; 
-  height: auto;
+  width: 100%; /* Forces the image to fill the column */
+  aspect-ratio: 16 / 9; /* Sets a strict uniform shape (change to 4/3 or 1/1 if your videos are squarer) */
+  object-fit: cover; /* Crops the image elegantly if its native ratio doesn't match, preventing squishing/stretching */
   border-radius: 8px; 
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
 }
