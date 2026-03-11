@@ -115,20 +115,21 @@ Training/inference Mode 2, 3 and 4 correspond to the "Semantic Only", "Temporal 
   <table style="width:100%; text-align:center; border:none;">
     <tr>
       <td width="33%">
-        <img src="docs/img/CompOrdSynt.gif" alt="Proximity Real Videos Prediction" width="100%">
-        <br>
-        <sub><b>Proximity Real Videos Prediction (Green is ours)</b></sub>
-      </td>
-      <td width="33%">
-        <img src="docs/img/CompOrdSynt.gif" alt="Ordering Real Videos Prediction" width="100%">
-        <br>
-        <sub><b>Ordering Real Videos Prediction (Green is ours)</b></sub>
-      </td>
-      <td width="33%">
         <img src="docs/img/CompBridgeGood364.gif" alt="Bridge Prediction" width="100%">
         <br>
         <sub><b>Bridge Prediction (Green is ours)</b></sub>
       </td>
+      <td width="33%">
+        <img src="docs/img/CompProximityBad2.gif" alt="Proximity Real Videos Prediction" width="100%">
+        <br>
+        <sub><b>Proximity Real Videos Prediction (Green is ours)</b></sub>
+      </td>
+      <td width="33%">
+        <img src="docs/img/CompOrderingBad1.gif" alt="Ordering Real Videos Prediction" width="100%">
+        <br>
+        <sub><b>Ordering Real Videos Prediction (Green is ours)</b></sub>
+      </td>
+      
     </tr>
   </table>
 </div>
