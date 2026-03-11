@@ -26,8 +26,8 @@ Remove any sections you do not need.
 <div align="center">
   <a href="https://ropertunizar.github.io/TIMID/"><strong>🌍 Homepage</strong></a> |
   <a href="https://huggingface.co/datasets/nereagallego/TIMID-data"><strong>🤗 Benchmarks </strong></a> |
-  <a href="ARXIV_OR_PAPER_URL"><strong>📝 Paper</strong></a> |
-  <a href="DEMO_URL"><strong>🎬 Demo</strong></a> |
+  <a href="https://arxiv.org/abs/2603.09782"><strong>📝 Paper</strong></a> |
+  <!-- <a href="DEMO_URL"><strong>🎬 Demo</strong></a> | -->
   <a href="https://huggingface.co/datasets/nereagallego/TIMID-data/tree/main/ckpt"><strong>🧠 Models</strong></a>
 </div>
 
@@ -115,7 +115,6 @@ Training/inference Mode 2, 3 and 4 correspond to the "Semantic Only", "Temporal 
 @inproceedings{gallego2026timid,
   title={TIMID: Time-Dependent Mistake Detection in Videos of Robot Executions},
   author={Gallego, Nerea and Salanova, Fernando and Mannarano, Claudio and Mahulea, Cristian and Montijano, Eduardo},
-  <!-- booktitle={VENUE}, -->
   year={2026}
 }
 ```
