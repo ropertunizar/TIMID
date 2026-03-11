@@ -125,7 +125,7 @@ Training/inference Mode 2, 3 and 4 correspond to the "Semantic Only", "Temporal 
         <sub><b>Ordering Real Videos Prediction (Green is ours)</b></sub>
       </td>
       <td width="33%">
-        <img src="docs/img/BridgeCompGood364.gif" alt="Bridge Prediction" width="100%">
+        <img src="docs/img/CompBridgeGood364.gif" alt="Bridge Prediction" width="100%">
         <br>
         <sub><b>Bridge Prediction (Green is ours)</b></sub>
       </td>
