@@ -192,3 +192,47 @@ pre {
 article.publication {
   margin: 1rem 0;
 }
+
+/* GIF Row Container */
+.gif-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px; /* Space between the GIFs */
+  margin-top: 40px; /* Space above the row */
+  margin-bottom: 40px;
+}
+
+/* Individual GIF Container */
+.gif-item {
+  flex: 1; /* Ensures all three columns take up equal space */
+  text-align: center;
+}
+
+/* The GIF Images */
+.gif-item img {
+  max-width: 100%; /* Makes the GIFs responsive */
+  height: auto;
+  border-radius: 8px; /* Optional: rounds the corners slightly */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: adds a subtle shadow */
+}
+
+/* Optional Caption Text */
+.gif-item p {
+  margin-top: 10px;
+  font-size: 0.9em;
+  color: #555;
+}
+
+/* Responsive design for smaller screens (Mobile) */
+@media (max-width: 768px) {
+  .gif-row {
+    flex-direction: column; /* Stacks the GIFs vertically on mobile */
+    align-items: center;
+  }
+  
+  .gif-item {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
